@@ -1,0 +1,31 @@
+<div class="row mb-5">
+  {{#each notes}}
+    <div class="col-md-3 mb-4">
+      <div class="card">
+        <div class="card-body">
+          <div class="d-flex justify-content-end">
+            <a href="/notes/edit/{{id}}"><img height="24px" src="https://image.flaticon.com/icons/svg/715/715750.svg" alt="edit"></a>
+          </div>
+          <h4 class="card-title justify-content-between align-items-center">
+            {{title}} 
+          </h4>
+          <p>{{description}}</p>
+          <form action="/notes/delete-note/{{id}}?_method=DELETE" method="POST"><!--Aquí usamos el metodo delete del modulo override -->
+            <input type="hidden" name="_method" value="DELETE"> <!--Ocupamos poner el input hidden para que funcione con el nombre _method que declaramos en index.js -->
+            <button class="btn btn-danger btn-block btn-sm"type="submit">
+              Delete
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+    {{else}}
+      <div class="card mx-auto">
+        <div class="card-body text-center">
+          <h2>Hello {{userFound}}!</h2>
+          <p class="lead">There are not notes yet.</p>
+          <a href="/notes/add" class="btn btn-success btn-block">Create a note!</a>
+        </div>
+      </div>
+  {{/each}}
+</div>

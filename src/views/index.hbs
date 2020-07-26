@@ -1,0 +1,11 @@
+<div class="jumbotron">
+  <h1 class="display-4">Notes App</h1>
+  <p class="lead">Now you have the best way to manage your personal notes!</p>
+  <hr class="my-4" >
+  <p>With this app you can create, delete, update and get all your notes</p>
+  {{#if user}}
+    <a href="/notes" class="btn btn-primary btn-lg">My notes</a>
+    {{else}}
+    <a href="/users/signup" class="btn btn-primary btn-lg">SignUp</a>
+  {{/if}}
+</div>
