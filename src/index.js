@@ -51,7 +51,12 @@ app.use(require("./routes/notes"));
 app.use(require("./routes/users"));
 //Static Files
 app.use(express.static(path.join(__dirname, "public")));
+
+//Read localhost of environment variables and port
+const host = process.env.HOST || "0.0.0.0";
+const port = process.env.PORT || 3000;
+
 //Server is listening
-app.listen(app.get("port"), () => {
-  console.log(`Server on port ${app.get("port")}`);
+app.listen(port, host, () => {
+  console.log("Server is running");
 });
