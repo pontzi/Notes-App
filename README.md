@@ -2,7 +2,7 @@
 
 Implemented with Node.js, MongoDB and Express
 
-![Desktop version](./src/public/images/desktop.PNG)
+![Desktop version](./src/public/images/desktopImage.PNG)
 ![Mobile version](./src/public/images/mobile.PNG)
 
 [You can se the online page here](https://serene-dawn-09384.herokuapp.com/)
